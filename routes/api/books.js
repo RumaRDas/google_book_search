@@ -9,10 +9,6 @@ router.get("/title/:title", (req, res) =>{
    booksController.findAll(req, res);
 })
 
-// router.get("/author/:author")
-
-// router.get("/search/:query")
-
 router.route("/")
     //for getting all books
     .get(booksController.findAll)
