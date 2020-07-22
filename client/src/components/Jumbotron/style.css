@@ -1,0 +1,11 @@
+.backColor{
+    background-image: url("../../images/back_img.jpg");
+    background-size: cover;
+    height: 270px;
+    text-align: center;
+    padding-top: 20px;
+    color: #ffffff;
+    background-position: 50% 50%;
+    font-weight: 70px;
+    text-shadow: 5px 3px #383434;
+}

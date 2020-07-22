@@ -1,27 +1,32 @@
 import React from "react";
+import './style.css'
 
-// This file exports the Input, TextArea, and FormBtn components
+// Exporting the Container, Row, and Col components from this file
 
-export function Input(props) {
-  return (
-    <div className="form-group">
-      <input className="form-control" {...props} />
-    </div>
-  );
+// This Container component allows us to use a bootstrap container without worrying about class names
+export function Container({ fluid, children }) {
+  return <div className={`Contaiback container${fluid ? "-fluid" : ""  }`} >{children}</div>;
+}
+export function Container1({ fluid, children }) {
+    return <div className={`Contaiback1 container${fluid ? "-fluid" : ""  }`} >{children}</div>;
+  }
+  
+// This Row component lets us use a bootstrap row without having to think about class names
+export function Row({ fluid, children }) {
+  return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
 }
 
-export function TextArea(props) {
+// This Col component lets us size bootstrap columns with less syntax
+// e.g. <Col size="md-12"> instead of <div className="col-md-12">
+export function Col({ size, children }) {
   return (
-    <div className="form-group">
-      <textarea className="form-control" rows="20" {...props} />
+    <div
+      className={size
+        .split(" ")
+        .map(size => "col-" + size)
+        .join(" ")}
+    >
+      {children}
     </div>
-  );
-}
-
-export function FormBtn(props) {
-  return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      {props.children}
-    </button>
   );
 }

@@ -1,12 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './style/App.css';
+import Nav from './components/Nav';
+import Dashboard from './pages/Dashboard';
+import Jumbotron from './components/Jumbotron'
 
 function App() {
   return (
-    <div className="App">
-<h1>Hello world</h1>
-    </div>
+
+<div>
+
+<Nav/>
+<Jumbotron />
+<Dashboard/>
+
+</div>
+
   );
 }
 

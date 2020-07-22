@@ -1,0 +1,21 @@
+.navBack{
+    background:rgb(202, 102, 35)
+}
+
+  #navbarNav ul li a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+ padding-right: 40px;
+ padding-bottom: 0px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  #navbarNav ul li a:hover {
+    color: rgb(77, 59, 59);
+    font-size: 18px;
+  }
+  .topnav a.active {
+
+    color: rgb(240, 239, 175);
+  }

@@ -1,0 +1,13 @@
+.searchStyle{
+    padding-bottom: 20px;
+    padding-top: 5px;
+  
+}
+button{
+    background: rgb(216, 108, 8);
+    color: white;
+    font-weight: 200px;
+}
+.searchBack{
+background-color: rgb(43, 34, 34);
+}

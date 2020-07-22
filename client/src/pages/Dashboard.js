@@ -1,24 +1,26 @@
-import React from 'react';
-import Jumbotron from '../components/Jumbotron';
-import {Link} from 'react-router-dom';
-import {Container, Row, Col }from '../components/Grid';
-import {Input} from '../components/List';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col } from '../components/Grid';
+import Search from '../components/Search';
+import BookList from '../components/BookList';
+import '../style/App.css'
+const Dashboard = () => {
 
-const Dashboard = () =>{
+    // Setting our component's initial state
+    // const [books, setBooks] = useState([])
+    // const [search, setSearch] = useEffect("")
+
     return (
-        <Container>
-        <Row>
-        <Col size="md-12">
-        <div className="jumbotron">
-        <h1 className="display-4">Hello, world!</h1>
-        <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr className="my-4"/>
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-        </Col>
-        </Row>
-        </Container>
+        <>
+            <Search />
+            <Container >
+                <Row >
+                    <Col size="md-12">
+                        <BookList />
+                    </Col>
+                </Row>
+            </Container>
+        </>
     )
 }
 
