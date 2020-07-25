@@ -1,20 +1,21 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import './style.css';
 
 function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark navBack">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
                 <h3>my<strong>Books</strong></h3>
-            </a>
+            </Link>
             <div id="navbarNav" className=" row ml-auto ">
     
                 <ul className="navbar-nav ">
                     <li className="nav-item ">
-                        <a className="nav-link" href="#">Search </a>
+                        <Link className="nav-link" to="/">Search </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">MyBooks</a>
+                        <Link className="nav-link" to="/saved">MyBooks</Link>
                     </li>
                 </ul>
   

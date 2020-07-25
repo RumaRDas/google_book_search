@@ -3,23 +3,35 @@ import "./style.css";
 
 // This file exports both the List and ListItem components
 
-const  BookList =({ children })=> {
-  return (
-      <div>
-    <div className="media">
-                      
-    <img src="..." className="mr-3" alt="..." />
-    <div className="media-body">
-        <h5 className="mt-0">Media heading</h5>
-        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    </div>
-    <div>
-        <button className="btn btn-sm btn-success">Save</button>
-        <button className="btn btn-sm btn-danger">Delete</button>
-    </div>
-</div>
-<div className="line"><hr></hr></div>
-</div>
-  )
+const BookList = (props) => {
+
+    return (
+        <div>
+            {
+                props.books.map(book => (
+                    <div className="media ">
+                        <div key={book.id}></div>
+                        <div className="media-body">
+                            <h3 className="mt-0 titleStyle">{book.volumeInfo.title}</h3>
+                            <h5 className="mt-0 mb-3"> Author: {book.volumeInfo.authors}</h5>
+                            <div className="row">
+                                <div className="col col-md-12">
+                                    <img src={book.volumeInfo.imageLinks.thumbnail} className="mr-3 textWrap" />
+                                    <p>{book.volumeInfo.description}</p>
+                                    <a href={book.volumeInfo.infoLink}>Learn More </a>
+                                </div>
+                            </div>
+                            <div className="saveBtn">
+                           <button className="btn btn-sm btn-success" onClick={() => props.saveBook(book)}>Save</button>                         
+                            </div>
+                            <div className="line"><hr /></div>
+                        </div>
+
+                    </div>
+                )
+                )
+            }
+        </div>
+    )
 }
 export default BookList;

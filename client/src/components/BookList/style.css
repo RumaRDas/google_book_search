@@ -1,6 +1,20 @@
 .line{
     background-color: rgb(161, 70, 9);
     height: 2px;
-margin-bottom: 10px;
-
+   margin-bottom: 25px;
+   margin-top: 40px;
+   
+}
+.titleStyle{
+    color: #b95706;
+    padding-bottom: 10px;
+}
+.textWrap{
+    float: left;
+    margin: 10px;
+}
+.saveBtn{
+    float: right;
+    
+ 
 }

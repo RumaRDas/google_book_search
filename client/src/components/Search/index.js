@@ -9,9 +9,9 @@ const Search =(props) =>{
       <div className="searchBack">
       <Container1 background="red">
     <div className="input-group searchStyle">
-    <input type="text" className="form-control" placeholder="Search your Books..." value=" "onChange="" />
+    <input type="text" className="form-control" placeholder="Search your Books..." value={props.search} onChange={props.onInputChange} />
     <div className="input-group-append">
-      <button className="btn" onClick="">Search </button>
+      <button className="btn" onClick={props.searchClick}>Search </button>
     </div>
     </div>
     </Container1>
