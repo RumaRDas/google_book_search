@@ -47,3 +47,6 @@ This is a React-based Google Books Search app. This app helps user, query and di
         $ npm install react-router-dom
         $ npm install axios
 
+[View](https://github.com/RumaRDas/google_book_search.git)
+
+![Page View](./image/pic.png) 

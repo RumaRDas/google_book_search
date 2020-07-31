@@ -33,6 +33,7 @@ const Dashboard = () => {
     const searchClick = () => {
         loadBooks()
     }
+    
     const deleteBook = (id) => {
         Api.deleteBook(id)
             .then(res => loadBooks())
